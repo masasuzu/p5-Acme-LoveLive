@@ -52,5 +52,16 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/masasuzu/p5-Acme-LoveLive/issues"
+      },
+      "homepage" : "https://github.com/masasuzu/p5-Acme-LoveLive",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/masasuzu/p5-Acme-LoveLive.git",
+         "web" : "https://github.com/masasuzu/p5-Acme-LoveLive"
+      }
+   },
    "version" : "0.01"
 }

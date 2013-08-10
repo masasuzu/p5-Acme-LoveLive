@@ -2,13 +2,8 @@ package Acme::LoveLive;
 use 5.008005;
 use strict;
 use warnings;
-use Acme::LoveLive::Muse;
 
 our $VERSION = "0.01";
-
-sub muse {
-    return 'Acme::LoveLive::Muse';
-}
 
 
 1;
