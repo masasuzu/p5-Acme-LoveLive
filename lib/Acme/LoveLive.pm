@@ -17,7 +17,11 @@ Acme::LoveLive - It's new $module
 
 =head1 SYNOPSIS
 
-    use Acme::LoveLive;
+    use Acme::LoveLive::μ's;
+    for my $member (Acme::LoveLive::μ's->members) {
+        say encode_utf8($member->colorize(sprintf('%s: %s', $member->name, $member->call)));
+    }
+
 
 =head1 DESCRIPTION
 
