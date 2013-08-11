@@ -7,7 +7,7 @@ use warnings;
 
 # バイオレット
 # RGB 112, 93, 168
-sub cyalume_color { 'rgb233' }
+sub cyalume_color { 'rgb223' }
 
 # バイオレット
 # RGB 112, 93, 168
