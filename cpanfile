@@ -1,4 +1,4 @@
-requires 'perl', '5.008001';
+requires 'perl', '5.10.0';
 
 requires 'Term::ANSIColor';
 on 'test' => sub {

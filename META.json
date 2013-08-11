@@ -42,7 +42,8 @@
       },
       "runtime" : {
          "requires" : {
-            "perl" : "5.008005"
+            "Term::ANSIColor" : "0",
+            "perl" : "v5.10.0"
          }
       },
       "test" : {
