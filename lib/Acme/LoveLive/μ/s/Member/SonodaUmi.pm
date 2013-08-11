@@ -5,6 +5,10 @@ use 5.10.0;
 use strict;
 use warnings;
 
+# ブルー
+# RGB 0, 111, 171
+sub cyalume_color { 'rgb023' }
+
 # 群青
 # RGB 70, 93, 170
 sub color { 'rgb123' }

@@ -11,6 +11,11 @@ sub colorize {
     return colored($target, $class->color);
 }
 
+sub colorize_by_cylume {
+    my ($class, $target) = @_;
+    return colored($target, $class->cyalume_color);
+}
+
 sub call { '' }
 
 1;

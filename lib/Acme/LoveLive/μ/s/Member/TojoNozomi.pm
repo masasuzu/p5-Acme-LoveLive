@@ -7,6 +7,10 @@ use warnings;
 
 # バイオレット
 # RGB 112, 93, 168
+sub cyalume_color { 'rgb233' }
+
+# バイオレット
+# RGB 112, 93, 168
 sub color { 'rgb223' }
 sub name  { '東條希' }
 sub cv    { '楠田亜衣奈' }

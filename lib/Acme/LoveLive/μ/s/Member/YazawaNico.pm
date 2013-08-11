@@ -5,6 +5,10 @@ use 5.10.0;
 use strict;
 use warnings;
 
+# ピンク
+# RGB 234, 145, 152
+sub cyalume_color { 'rgb533' }
+
 # ショッキングピンク
 # RGB 255, 0,153
 sub color { 'rgb503' }

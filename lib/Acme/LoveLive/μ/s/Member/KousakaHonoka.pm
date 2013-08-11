@@ -5,6 +5,10 @@ use 5.10.0;
 use strict;
 use warnings;
 
+# オレンジ
+# RGB 255, 153, 0
+sub cyalume_color { 'rgb530' }
+
 # 山吹色
 # RGB 239,169,42
 sub color { 'rgb431' }

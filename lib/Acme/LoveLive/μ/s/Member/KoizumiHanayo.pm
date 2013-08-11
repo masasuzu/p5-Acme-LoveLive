@@ -7,6 +7,10 @@ use warnings;
 
 # 緑
 # RGB 0, 255, 0
+sub cyalume_color { 'rgb050' }
+
+# 緑
+# RGB 0, 255, 0
 sub color { 'rgb050' }
 sub name  { '小泉花陽' }
 sub cv    { '久保ユリカ' }

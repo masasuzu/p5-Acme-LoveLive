@@ -5,6 +5,10 @@ use 5.10.0;
 use strict;
 use warnings;
 
+# パステルブルー
+# RGB 87, 145, 173
+sub cyalume_color { 'rgb233' }
+
 # 水色
 # RGB 175, 223, 228
 sub color { 'rgb344' }
