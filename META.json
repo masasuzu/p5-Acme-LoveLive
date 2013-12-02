@@ -4,7 +4,7 @@
       "SUZUKI Masashi <m15.suzuki.masashi@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v0.5.6, CPAN::Meta::Converter version 2.132140",
+   "generated_by" : "Minilla/v0.9.0, CPAN::Meta::Converter version 2.132830",
    "license" : [
       "perl_5"
    ],
@@ -21,7 +21,8 @@
          "share",
          "eg",
          "examples",
-         "author"
+         "author",
+         "builder"
       ]
    },
    "prereqs" : {
