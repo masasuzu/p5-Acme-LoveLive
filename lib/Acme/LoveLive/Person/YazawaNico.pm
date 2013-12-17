@@ -1,9 +1,9 @@
-use utf8;
-package Acme::LoveLive::μ::s::Member::YazawaNico;
-use parent 'Acme::LoveLive::μ::s::Member';
+package Acme::LoveLive::Person::YazawaNico;
+use parent 'Acme::LoveLive::Person';
 use 5.10.0;
 use strict;
 use warnings;
+use utf8;
 
 # ピンク
 # RGB 234, 145, 152

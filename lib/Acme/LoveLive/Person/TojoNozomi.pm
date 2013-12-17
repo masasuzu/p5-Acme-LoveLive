@@ -1,9 +1,9 @@
-use utf8;
-package Acme::LoveLive::μ::s::Member::TojoNozomi;
-use parent 'Acme::LoveLive::μ::s::Member';
+package Acme::LoveLive::Person::TojoNozomi;
+use parent 'Acme::LoveLive::Person';
 use 5.10.0;
 use strict;
 use warnings;
+use utf8;
 
 # バイオレット
 # RGB 112, 93, 168

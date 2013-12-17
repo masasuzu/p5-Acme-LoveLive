@@ -4,7 +4,7 @@
       "SUZUKI Masashi <m15.suzuki.masashi@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v0.9.0, CPAN::Meta::Converter version 2.132830",
+   "generated_by" : "Minilla/v0.9.0, CPAN::Meta::Converter version 2.132140",
    "license" : [
       "perl_5"
    ],
@@ -65,5 +65,8 @@
          "web" : "https://github.com/masasuzu/p5-Acme-LoveLive"
       }
    },
-   "version" : "0.01"
+   "version" : "0.01",
+   "x_contributors" : [
+      "masashi <masashi@mfac.jp>"
+   ]
 }

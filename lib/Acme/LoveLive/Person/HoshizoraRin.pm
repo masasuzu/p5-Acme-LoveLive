@@ -1,9 +1,9 @@
-use utf8;
-package Acme::LoveLive::μ::s::Member::HoshizoraRin;
-use parent 'Acme::LoveLive::μ::s::Member';
+package Acme::LoveLive::Person::HoshizoraRin;
+use parent 'Acme::LoveLive::Person';
 use 5.10.0;
 use strict;
 use warnings;
+use utf8;
 
 # パステルイエロー
 # RGB 255, 255, 102
