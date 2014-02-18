@@ -1,2 +1,12 @@
 # carton snapshot format: version 1.0
 DISTRIBUTIONS
+  YAML-Syck-1.27
+    pathname: T/TO/TODDR/YAML-Syck-1.27.tar.gz
+    provides:
+      JSON::Syck 1.27
+      YAML::Dumper::Syck undef
+      YAML::Loader::Syck undef
+      YAML::Syck 1.27
+    requirements:
+      ExtUtils::MakeMaker 6.59
+      perl 5.006

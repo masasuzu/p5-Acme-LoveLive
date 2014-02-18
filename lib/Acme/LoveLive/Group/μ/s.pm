@@ -4,15 +4,7 @@ use 5.10.0;
 use strict;
 use warnings;
 
-use Acme::LoveLive::Person::KousakaHonoka;
-use Acme::LoveLive::Person::MinamiKotori;
-use Acme::LoveLive::Person::SonodaUmi;
-use Acme::LoveLive::Person::KoizumiHanayo;
-use Acme::LoveLive::Person::HoshizoraRin;
-use Acme::LoveLive::Person::NishikinoMaki;
-use Acme::LoveLive::Person::AyaseEli;
-use Acme::LoveLive::Person::TojoNozomi;
-use Acme::LoveLive::Person::YazawaNico;
+use Acme::LoveLive::Person;
 
 our @MEMBERS = qw(
     eli     nozomi  nico

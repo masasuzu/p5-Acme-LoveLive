@@ -20,14 +20,14 @@ Acme::LoveLive - It's new $module
     use utf8;
     use Acme::LoveLive::Group::μ's;
     for my $member (Acme::LoveLive::Group::μ's->members) {
-        say encode_utf8($member->colorize(sprintf('%s: %s', $member->name, $member->call)));
-        say encode_utf8($member->colorize_by_cylume(sprintf('%s: %s', $member->name, $member->call)));
+        say $member->colorize(sprintf('%s: %s', $member->name, $member->call));
+        say $member->colorize_by_cylume(sprintf('%s: %s', $member->name, $member->call));
     }
 
 
 =head1 DESCRIPTION
 
-Acme::LoveLive is ...
+Acme::LoveLive is Module for ラブライ部員
 
 =head1 LICENSE
 
