@@ -1,21 +1,24 @@
 # NAME
 
-Acme::LoveLive - It's new $module
+Acme::LoveLive - All about Japanese School Idol animation.
 
 # SYNOPSIS
 
     use utf8;
     use Acme::LoveLive::Group::μ's;
     for my $member (Acme::LoveLive::Group::μ's->members) {
-        say encode_utf8($member->colorize(sprintf('%s: %s', $member->name, $member->call)));
-        say encode_utf8($member->colorize_by_cylume(sprintf('%s: %s', $member->name, $member->call)));
+        say $member->colorize(sprintf('%s: %s', $member->name, $member->call));
+        say $member->colorize_by_cylume(sprintf('%s: %s', $member->name, $member->call));
     }
 
 
 
 # DESCRIPTION
 
-Acme::LoveLive is ...
+ラブライブ! is famous Japanese animation.
+And μ's is School Idol group in ラブライブ!
+
+This module, Acme::LoveLive, provides some usefull method  for μ's fan so called ラブライ部員.
 
 # LICENSE
 

@@ -13,7 +13,7 @@ __END__
 
 =head1 NAME
 
-Acme::LoveLive - It's new $module
+Acme::LoveLive - All about Japanese School Idol animation.
 
 =head1 SYNOPSIS
 
@@ -27,7 +27,11 @@ Acme::LoveLive - It's new $module
 
 =head1 DESCRIPTION
 
-Acme::LoveLive is Module for ラブライ部員
+ラブライブ! is famous Japanese animation.
+And μ's is School Idol group in ラブライブ!
+
+This module, Acme::LoveLive, provides some usefull method  for μ's fan so called ラブライ部員.
+
 
 =head1 LICENSE
 
