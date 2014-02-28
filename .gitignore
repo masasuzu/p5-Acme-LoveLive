@@ -1,6 +1,7 @@
 /.build/
 /_build/
 /Build
+/Build.bat
 /blib
 
 /carton.lock
