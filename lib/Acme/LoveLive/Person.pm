@@ -5,7 +5,15 @@ use utf8;
 package Acme::LoveLive::Person;
 use Term::ANSIColor qw( colored );
 
+our $COLOR_MODE = 'image';
+
 sub colorize {
+    my ($class, $target) = @_;
+    my $method = "${COLOR_MODE}_rgb";
+    return colored($target, $class->$method);
+}
+
+sub colorize_by_image {
     my ($class, $target) = @_;
     return colored($target, $class->image_rgb);
 }
