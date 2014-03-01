@@ -1,6 +1,6 @@
-use 5.18.1;
 use strict;
 use warnings;
+use utf8;
 
 package Acme::LoveLive::Person;
 use Term::ANSIColor qw( colored );
