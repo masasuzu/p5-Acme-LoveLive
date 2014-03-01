@@ -2,6 +2,9 @@ use strict;
 use warnings;
 use utf8;
 use feature qw( say );
+use File::Spec;
+use File::Basename;
+use lib File::Spec->catdir(dirname(__FILE__), '..', 'lib');
 
 use Encode;
 use Acme::LoveLive::Group::μ's;
