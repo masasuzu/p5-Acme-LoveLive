@@ -7,6 +7,7 @@ use warnings;
 use Acme::LoveLive::Data;
 use Acme::LoveLive::Person;
 
+# FIXME: 自動でメソッドが決まるように
 sub eli    { "Acme::LoveLive::Person::AyaseEli"      }
 sub nozomi { "Acme::LoveLive::Person::TojoNozomi"    }
 sub nico   { "Acme::LoveLive::Person::YazawaNico"    }
@@ -26,7 +27,8 @@ sub group_data { Acme::LoveLive::Data->group(shift->group_name) }
 sub members {
     my $class = shift;
 
-    return map { my $m = $_->{first_name}; $class->$m } @{ $class->group_data };
+    my $data = $class->group_data;
+    return map { my $m = $data->{$_}->{first_name_en}; $class->$m } keys %{ $data };
 }
 
 1;

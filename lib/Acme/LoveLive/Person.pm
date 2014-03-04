@@ -27,7 +27,7 @@ sub colorize_by_cylume {
 sub call { '' }
 
 {
-    my $data = Acme::LoveLive::Data->new->data;
+    my $data = Acme::LoveLive::Data->data;
     for my $fullname (keys %{ $data->{person} }) {
         no strict 'refs';
 
@@ -35,7 +35,7 @@ sub call { '' }
         @{"${class}::ISA"} = qw(
             Acme::LoveLive::Person
         );
-        for my $method (qw( name_ja call cv irc_color cyalume_rgb image_rgb )) {
+        for my $method (keys %{$data->{person}->{$fullname}}) {
             *{"${class}::${method}"} = sub {
                 $data->{person}->{$fullname}->{$method};
             };
