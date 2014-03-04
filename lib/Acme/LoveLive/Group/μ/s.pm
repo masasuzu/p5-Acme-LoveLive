@@ -15,7 +15,7 @@ our @MEMBERS = qw(
 sub eli    { "Acme::LoveLive::Person::AyaseEli"      }
 sub nozomi { "Acme::LoveLive::Person::TojoNozomi"    }
 sub nico   { "Acme::LoveLive::Person::YazawaNico"    }
-sub honoka { "Acme::LoveLive::Person::KousakaHonoka" }
+sub honoka { "Acme::LoveLive::Person::KosakaHonoka"  }
 sub kotori { "Acme::LoveLive::Person::MinamiKotori"  }
 sub umi    { "Acme::LoveLive::Person::SonodaUmi"     }
 sub hanayo { "Acme::LoveLive::Person::KoizumiHanayo" }

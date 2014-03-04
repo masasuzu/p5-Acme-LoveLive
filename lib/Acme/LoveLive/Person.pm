@@ -25,12 +25,6 @@ sub colorize_by_cylume {
 
 sub call { '' }
 
-our @PEOPLE = qw(
-    eli     nozomi  nico
-    honoka  umi     kotori
-    maki    rin     hanayo
-);
-
 our %NAME_MAP = qw(
     eli         AyaseEli
     nozomi      TojoNozomi
@@ -44,20 +38,21 @@ our %NAME_MAP = qw(
 );
 
 use YAML::Syck;
-my $data = LoadFile(*DATA);
+{
+    my $data = LoadFile(*DATA);
 
-for my $first_name (@PEOPLE) {
-    no strict 'refs';
+    for my $name (keys %{ $data->{people} }) {
+        no strict 'refs';
 
-    my $name = $NAME_MAP{$first_name};
-    my $class = "Acme::LoveLive::Person::$name";
-    @{"${class}::ISA"} = qw(
-        Acme::LoveLive::Person
-    );
-    for my $method (qw( name call cv irc_color cyalume_rgb image_rgb )) {
-        *{"${class}::${method}"} = sub {
-            $data->{people}->{$first_name}->{$method};
-        };
+        my $class = "Acme::LoveLive::Person::$name";
+        @{"${class}::ISA"} = qw(
+            Acme::LoveLive::Person
+        );
+        for my $method (qw( name call cv irc_color cyalume_rgb image_rgb )) {
+            *{"${class}::${method}"} = sub {
+                $data->{people}->{$name}->{$method};
+            };
+        }
     }
 }
 
@@ -68,8 +63,20 @@ __DATA__
 
 ---
 
+group:
+  "μ's":
+    - AyaseEli
+    - TojoNozomi
+    - YazawaNico
+    - KosakaHonoka
+    - SonodaUmi
+    - MinamiKotori
+    - KoizumiHanayo
+    - HoshizoraRin
+    - NishikinoMaki
+
 people:
-  eli:
+  AyaseEli:
     name:        '絢瀬絵里'
     call:        'かしこい かわいい エリーチカ'
     cv:          '南條愛乃'
@@ -77,7 +84,7 @@ people:
     cyalume_rgb: 'rgb233' # パステルブルー RGB 87,  145, 173
     image_rgb:   'rgb344' # 水色           RGB 175, 223, 228
 
-  nozomi:
+  TojoNozomi:
     name:        '東條希'
     call:        '希パワー注入 はい、ぷしゅー'
     cv:          '楠田亜衣奈'
@@ -85,7 +92,7 @@ people:
     cyalume_rgb: 'rgb223' # バイオレット RGB 112, 93, 168
     image_rgb:   'rgb223' # バイオレット RGB 112, 93, 168
 
-  nico:
+  YazawaNico:
     name:        '矢澤にこ'
     call:        'にっこにっこにー'
     cv:          '徳井青空'
@@ -93,7 +100,7 @@ people:
     cyalume_rgb: 'rgb533' # ピンク             RGB 234, 145, 152
     image_rgb:   'rgb503' # ショッキングピンク RGB 255,   0, 153
 
-  honoka:
+  KosakaHonoka:
     name:        '高坂穂乃果'
     call:        'ファイトだよ'
     cv:          '新田恵海'
@@ -101,7 +108,7 @@ people:
     cyalume_rgb: 'rgb530' # オレンジ RGB 255, 153,   0
     image_rgb:   'rgb431' # 山吹色   RGB 239, 169,  42
 
-  umi:
+  SonodaUmi:
     name:        '園田海未'
     call:        'ラブアローシュート'
     cv:          '三森すずこ'
@@ -109,7 +116,7 @@ people:
     cyalume_rgb: 'rgb023' # ブルー RGB  0, 111, 171
     image_rgb:   'rgb123' # 群青   RGB 70,  93, 170
 
-  kotori:
+  MinamiKotori:
     name:        '南ことり'
     call:        'ことりのおやつにするぞ(・8・)'
     cv:          '内田彩'
@@ -117,7 +124,7 @@ people:
     cyalume_rgb: 'rgb555' # ホワイト RGB 240, 240, 240
     image_rgb:   'rgb222' # グレー   RGB 118, 118, 118
 
-  maki:
+  NishikinoMaki:
     name:        '西木野真姫'
     call:        'でっしょー'
     cv:          'Pile'
@@ -125,7 +132,7 @@ people:
     cyalume_rgb: 'rgb401' # レッド RGB 224,  0,  42
     image_rgb:   'rgb511' # 朱色   RGB 239, 69,  74
 
-  rin:
+  HoshizoraRin:
     name:        '星空凜'
     call:        'にゃんにゃんにゃー'
     cv:          '飯田里穂'
@@ -133,7 +140,7 @@ people:
     cyalume_rgb: 'rgb552' # パステルイエロー RGB 255, 255, 102
     image_rgb:   'rgb144' # ターコイズ       RGB 64,  224, 208
 
-  hanayo:
+  KoizumiHanayo:
     name:        '小泉花陽'
     call:        'ダレカタスケテー'
     cv:          '久保ユリカ'
