@@ -12,7 +12,7 @@ sub instance {
     my ($class) = @_;
     $_instance //= do {
         my $data = LoadFile(*DATA);
-        bless +{ __data => $data };
+        bless +{ __data => $data } => $class;
     };
 }
 
