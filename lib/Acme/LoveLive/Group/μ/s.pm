@@ -4,13 +4,8 @@ use 5.10.0;
 use strict;
 use warnings;
 
+use Acme::LoveLive::Data;
 use Acme::LoveLive::Person;
-
-our @MEMBERS = qw(
-    eli     nozomi  nico
-    honoka  umi     kotori
-    maki    rin     hanayo
-);
 
 sub eli    { "Acme::LoveLive::Person::AyaseEli"      }
 sub nozomi { "Acme::LoveLive::Person::TojoNozomi"    }
@@ -25,9 +20,13 @@ sub maki   { "Acme::LoveLive::Person::NishikinoMaki" }
 *panayo = \&hanayo;
 *pana   = \&hanayo;
 
+sub group_name { "μ's" }
+sub group_data { Acme::LoveLive::Data->group(shift->group_name) }
+
 sub members {
-    my $self = shift;
-    return map { $self->$_ } @MEMBERS;
+    my $class = shift;
+
+    return map { my $m = $_->{first_name}; $class->$m } @{ $class->group_data };
 }
 
 1;
