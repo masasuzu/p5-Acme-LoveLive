@@ -9,22 +9,31 @@ use Acme::LoveLive::Data;
 our $COLOR_MODE = 'image';
 
 sub colorize {
-    my ($class, $target) = @_;
+    my ($self, $target) = @_;
     my $method = "${COLOR_MODE}_rgb";
-    return colored($target, $class->$method);
+    return colored($target, $self->$method);
 }
 
 sub colorize_by_image {
-    my ($class, $target) = @_;
-    return colored($target, $class->image_rgb);
+    my ($self, $target) = @_;
+    return colored($target, $self->image_rgb);
 }
 
 sub colorize_by_cylume {
-    my ($class, $target) = @_;
-    return colored($target, $class->cyalume_rgb);
+    my ($self, $target) = @_;
+    return colored($target, $self->cyalume_rgb);
 }
 
-sub call { '' }
+sub phrases {
+    my ($self,) = @_;
+    $self->{__phrases} //= [ $self->call ];
+    return @{ $self->{__phrases} };
+}
+
+sub add_phrases {
+    my ($self, @phrases) = @_;
+    $self->{__phrases} = [$self->phrases, @phrases];
+}
 
 {
     my $data = Acme::LoveLive::Data->data;
