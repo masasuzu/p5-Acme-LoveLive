@@ -19,6 +19,52 @@ DISTRIBUTIONS
       Test::More 0
       parent 0
       perl 5.008001
+  CPAN-Meta-2.133380
+    pathname: D/DA/DAGOLDEN/CPAN-Meta-2.133380.tar.gz
+    provides:
+      CPAN::Meta 2.133380
+      CPAN::Meta::Converter 2.133380
+      CPAN::Meta::Feature 2.133380
+      CPAN::Meta::History 2.133380
+      CPAN::Meta::Prereqs 2.133380
+      CPAN::Meta::Spec 2.133380
+      CPAN::Meta::Validator 2.133380
+    requirements:
+      CPAN::Meta::Requirements 2.121
+      CPAN::Meta::YAML 0.008
+      Carp 0
+      ExtUtils::MakeMaker 6.17
+      JSON::PP 2.27200
+      List::Util 1.33
+      Parse::CPAN::Meta 1.4403
+      Scalar::Util 0
+      strict 0
+      version 0.88
+      warnings 0
+  CPAN-Meta-Requirements-2.125
+    pathname: D/DA/DAGOLDEN/CPAN-Meta-Requirements-2.125.tar.gz
+    provides:
+      CPAN::Meta::Requirements 2.125
+    requirements:
+      Carp 0
+      ExtUtils::MakeMaker 6.17
+      Scalar::Util 0
+      strict 0
+      version 0.77
+      warnings 0
+  CPAN-Meta-YAML-0.012
+    pathname: D/DA/DAGOLDEN/CPAN-Meta-YAML-0.012.tar.gz
+    provides:
+      CPAN::Meta::YAML 0.012
+    requirements:
+      B 0
+      Carp 0
+      Exporter 0
+      ExtUtils::MakeMaker 6.17
+      Fcntl 0
+      Scalar::Util 0
+      strict 0
+      warnings 0
   Class-Method-Modifiers-2.09
     pathname: E/ET/ETHER/Class-Method-Modifiers-2.09.tar.gz
     provides:
@@ -347,6 +393,19 @@ DISTRIBUTIONS
       Role::Tiny 1.003002
       perl 5.008001
       strictures 1.004003
+  Parse-CPAN-Meta-1.4413
+    pathname: D/DA/DAGOLDEN/Parse-CPAN-Meta-1.4413.tar.gz
+    provides:
+      Parse::CPAN::Meta 1.4413
+    requirements:
+      CPAN::Meta::YAML 0.011
+      Carp 0
+      Encode 0
+      Exporter 0
+      ExtUtils::MakeMaker 6.30
+      File::Spec 0.80
+      JSON::PP 2.27200
+      strict 0
   Pod-Markdown-2.000
     pathname: R/RW/RWSTAUNER/Pod-Markdown-2.000.tar.gz
     provides:
@@ -374,8 +433,18 @@ DISTRIBUTIONS
       Role::Tiny::With undef
     requirements:
       Exporter 5.57
+      ExtUtils::MakeMaker 0
       Test::Fatal 0.003
       Test::More 0.96
+  Scalar-List-Utils-1.38
+    pathname: P/PE/PEVANS/Scalar-List-Utils-1.38.tar.gz
+    provides:
+      List::Util 1.38
+      List::Util::XS 1.38
+      Scalar::Util 1.38
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::More 0
   Sub-Exporter-Progressive-0.001011
     pathname: F/FR/FREW/Sub-Exporter-Progressive-0.001011.tar.gz
     provides:
@@ -543,7 +612,6 @@ DISTRIBUTIONS
     provides:
       strictures 1.005003
     requirements:
-      ExtUtils::CBuilder 0
       ExtUtils::MakeMaker 0
       bareword::filehandles 0
       indirect 0

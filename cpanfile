@@ -1,6 +1,5 @@
 requires 'perl', '5.10.0';
 
-requires 'Scalar::Util';
 requires 'Term::ANSIColor';
 requires 'YAML::Syck';
 on 'test' => sub {
