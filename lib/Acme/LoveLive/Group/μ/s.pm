@@ -8,15 +8,15 @@ use Acme::LoveLive::Data;
 use Acme::LoveLive::Person;
 
 # FIXME: 自動でメソッドが決まるように
-sub eli    { "Acme::LoveLive::Person::AyaseEli"      }
-sub nozomi { "Acme::LoveLive::Person::TojoNozomi"    }
-sub nico   { "Acme::LoveLive::Person::YazawaNico"    }
-sub honoka { "Acme::LoveLive::Person::KosakaHonoka"  }
-sub kotori { "Acme::LoveLive::Person::MinamiKotori"  }
-sub umi    { "Acme::LoveLive::Person::SonodaUmi"     }
-sub hanayo { "Acme::LoveLive::Person::KoizumiHanayo" }
-sub rin    { "Acme::LoveLive::Person::HoshizoraRin"  }
-sub maki   { "Acme::LoveLive::Person::NishikinoMaki" }
+sub eli    { "Acme::LoveLive::Person::AyaseEli"->new      }
+sub nozomi { "Acme::LoveLive::Person::TojoNozomi"->new    }
+sub nico   { "Acme::LoveLive::Person::YazawaNico"->new    }
+sub honoka { "Acme::LoveLive::Person::KosakaHonoka"->new  }
+sub kotori { "Acme::LoveLive::Person::MinamiKotori"->new  }
+sub umi    { "Acme::LoveLive::Person::SonodaUmi"->new     }
+sub hanayo { "Acme::LoveLive::Person::KoizumiHanayo"->new }
+sub rin    { "Acme::LoveLive::Person::HoshizoraRin"->new  }
+sub maki   { "Acme::LoveLive::Person::NishikinoMaki"->new }
 
 *panayo = \&hanayo;
 *pana   = \&hanayo;

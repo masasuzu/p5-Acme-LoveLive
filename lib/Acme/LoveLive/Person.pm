@@ -28,6 +28,10 @@ sub call { '' }
 
 {
     my $data = Acme::LoveLive::Data->data;
+    my @attributes = qw(
+        fullname_ja first_name_en last_name_en call cv
+        irc_color cyalume_rgb image_rgb
+    );
     for my $fullname (keys %{ $data->{person} }) {
         no strict 'refs';
 
@@ -35,11 +39,16 @@ sub call { '' }
         @{"${class}::ISA"} = qw(
             Acme::LoveLive::Person
         );
-        for my $method (keys %{$data->{person}->{$fullname}}) {
-            *{"${class}::${method}"} = sub {
-                $data->{person}->{$fullname}->{$method};
-            };
+
+        for my $attribute (@attributes) {
+            *{"${class}::${attribute}"} = sub { shift->{"__$attribute"} };
         }
+
+        *{"${class}::new"} = sub {
+            my ($klass) = @_;
+            my %args = map { my $attr = $_; "__$attr" => $data->{person}->{$fullname}->{$attr}; } @attributes;
+            return bless \%args, $klass;
+        };
     }
 }
 
