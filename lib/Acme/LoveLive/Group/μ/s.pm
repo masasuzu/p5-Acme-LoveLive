@@ -7,17 +7,6 @@ use warnings;
 use Acme::LoveLive::Data;
 use Acme::LoveLive::Person;
 
-# FIXME: 自動でメソッドが決まるように
-sub eli    { "Acme::LoveLive::Person::AyaseEli"->new      }
-sub nozomi { "Acme::LoveLive::Person::TojoNozomi"->new    }
-sub nico   { "Acme::LoveLive::Person::YazawaNico"->new    }
-sub honoka { "Acme::LoveLive::Person::KosakaHonoka"->new  }
-sub kotori { "Acme::LoveLive::Person::MinamiKotori"->new  }
-sub umi    { "Acme::LoveLive::Person::SonodaUmi"->new     }
-sub hanayo { "Acme::LoveLive::Person::KoizumiHanayo"->new }
-sub rin    { "Acme::LoveLive::Person::HoshizoraRin"->new  }
-sub maki   { "Acme::LoveLive::Person::NishikinoMaki"->new }
-
 *panayo = \&hanayo;
 *pana   = \&hanayo;
 
@@ -29,6 +18,17 @@ sub members {
 
     my $data = $class->group_data;
     return map { my $m = $data->{$_}->{first_name_en}; $class->$m } keys %{ $data };
+}
+
+{
+    my $class = __PACKAGE__;
+    my $data = $class->group_data;
+    for my $fullname_en (keys %{ $data }) {
+        my $first_name_en = $data->{$fullname_en}->{first_name_en};
+
+        no strict 'refs';
+        *{"${class}::${first_name_en}"} = sub { "Acme::LoveLive::Person::${fullname_en}"->instance };
+    }
 }
 
 1;
