@@ -2,9 +2,22 @@ package Acme::LoveLive;
 use 5.008005;
 use strict;
 use warnings;
+use utf8;
+use Encode;
+use Acme::LoveLive::Person;
+use Acme::LoveLive::Group;
 
 our $VERSION = "0.01";
 
+sub person {
+    my ($class, $fullname) = @_;
+    return "Acme::LoveLive::Person::$fullname"->instance;
+}
+
+sub group {
+    my ($class, $group_name) = @_;
+    return "Acme::LoveLive::Group::$group_name";
+}
 
 1;
 __END__
@@ -19,7 +32,7 @@ Acme::LoveLive - All about Japanese School Idol animation.
 
     use utf8;
     use Encode;
-    use Acme::LoveLive::Group::μ's;
+    use Acme::LoveLive;
     for my $member (Acme::LoveLive::Group::μ's->members) {
         say encode_utf8('image:  '. $member->colorize(sprintf('%s: %s', $member->fullname_ja, $member->call)));
         say encode_utf8('cylume: '. $member->colorize_by_cylume(sprintf('%s: %s', $member->fullname_ja, $member->call)));

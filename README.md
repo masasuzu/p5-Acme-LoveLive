@@ -6,7 +6,7 @@ Acme::LoveLive - All about Japanese School Idol animation.
 
     use utf8;
     use Encode;
-    use Acme::LoveLive::Group::μ's;
+    use Acme::LoveLive;
     for my $member (Acme::LoveLive::Group::μ's->members) {
         say encode_utf8('image:  '. $member->colorize(sprintf('%s: %s', $member->fullname_ja, $member->call)));
         say encode_utf8('cylume: '. $member->colorize_by_cylume(sprintf('%s: %s', $member->fullname_ja, $member->call)));

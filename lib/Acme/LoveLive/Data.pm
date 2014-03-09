@@ -19,8 +19,8 @@ sub instance {
 *new = \&instance;
 
 sub data   { shift->instance->{__data} }
-sub group  { shift->instance->{__data}->{'group'}->{$_[0]} }
-sub person { shift->instance->{__data}->{'person'}->{$_[0]} }
+sub group  { shift->data->{'group'}->{$_[0]} }
+sub person { shift->data->{'person'}->{$_[0]} }
 
 
 1;
