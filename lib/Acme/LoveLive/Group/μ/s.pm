@@ -3,6 +3,7 @@ package Acme::LoveLive::Group::μ::s;
 use 5.10.0;
 use strict;
 use warnings;
+use parent qw(Acme::LoveLive::Group);
 
 use Acme::LoveLive::Data;
 use Acme::LoveLive::Person;
@@ -11,25 +12,15 @@ use Acme::LoveLive::Person;
 *pana   = \&hanayo;
 
 sub group_name { "μ's" }
-sub group_data { Acme::LoveLive::Data->group(shift->group_name) }
-
-sub members {
-    my $class = shift;
-
-    my $data = $class->group_data;
-    return map { my $m = $data->{$_}->{first_name_en}; $class->$m } keys %{ $data };
-}
 
 {
     my $class = __PACKAGE__;
-    my $data = $class->group_data;
-    for my $fullname_en (keys %{ $data }) {
-        my $first_name_en = $data->{$fullname_en}->{first_name_en};
-
+    for my $person ($class->members) {
         no strict 'refs';
-        *{"${class}::${first_name_en}"} = sub { "Acme::LoveLive::Person::${fullname_en}"->instance };
+        *{"${class}::@{[$person->first_name_en]}"} = sub { $person };
     }
 }
+
 
 1;
 
