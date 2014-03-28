@@ -120,15 +120,40 @@ person:
     cyalume_rgb:    'rgb050' # 緑 RGB 0, 255, 0
     image_rgb:      'rgb050' # 緑 RGB 0, 255, 0
 
+  KiraTsubasa: &KiraTsubasa
+    fullname_ja:    '綺羅ツバサ'
+    first_name_en:  'tsubasa'
+    last_name_en:   'kira'
+    cv:             '桜川めぐ'
+
+  TodoErena: &TodoErena
+    fullname_ja:    '統堂英玲奈'
+    first_name_en:  'erena'
+    last_name_en:   'todo'
+    cv:             '松永真穂'
+
+  YukiAnju: &YukiAnju
+    fullname_ja:    '優木あんじゅ'
+    first_name_en:  'anju'
+    last_name_en:   'yuki'
+    cv:             '大橋歩夕'
+
 group:
   "μ's":
-    AyaseEli:      *AyaseEli
-    TojoNozomi:    *TojoNozomi
-    YazawaNico:    *YazawaNico
-    KosakaHonoka:  *KosakaHonoka
-    SonodaUmi:     *SonodaUmi
-    MinamiKotori:  *MinamiKotori
-    KoizumiHanayo: *KoizumiHanayo
-    HoshizoraRin:  *HoshizoraRin
-    NishikinoMaki: *NishikinoMaki
+    member:
+      AyaseEli:      *AyaseEli
+      TojoNozomi:    *TojoNozomi
+      YazawaNico:    *YazawaNico
+      KosakaHonoka:  *KosakaHonoka
+      SonodaUmi:     *SonodaUmi
+      MinamiKotori:  *MinamiKotori
+      KoizumiHanayo: *KoizumiHanayo
+      HoshizoraRin:  *HoshizoraRin
+      NishikinoMaki: *NishikinoMaki
+
+  "A-RISE":
+    member:
+      KiraTsubasa:    *KiraTsubasa
+      TodoErena:      *TodoErena
+      YukiAnju:       *YukiAnju
 

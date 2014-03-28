@@ -12,7 +12,7 @@ sub group_data { Acme::LoveLive::Data->group(shift->group_name) }
 
 sub member_fullnames {
     my ($class) = @_;
-    return (keys %{ $class->group_data });
+    return (keys %{ $class->group_data->{member} });
 }
 
 sub members {
@@ -37,6 +37,18 @@ sub group_name { "μ's" }
     }
 }
 
+package Acme::LoveLive::Group::A_RISE;
+use parent qw(Acme::LoveLive::Group);
+
+sub group_name { "A-RISE" }
+
+{
+    my $class = __PACKAGE__;
+    for my $person ($class->members) {
+        no strict 'refs';
+        *{"${class}::@{[$person->first_name_en]}"} = sub { $person };
+    }
+}
 
 1;
 

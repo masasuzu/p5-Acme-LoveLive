@@ -1,5 +1,5 @@
 package Acme::LoveLive;
-use 5.008005;
+use 5.10.0;
 use strict;
 use warnings;
 use utf8;
@@ -15,7 +15,14 @@ sub person {
 }
 
 sub group {
+
     my ($class, $group_name) = @_;
+    state $NORMALIZE_PROJECT = +{
+        'A-RISE' => 'A_RISE',
+    };
+
+    $group_name = $NORMALIZE_PROJECT->{$group_name} if exists $NORMALIZE_PROJECT->{$group_name};
+
     return "Acme::LoveLive::Group::$group_name";
 }
 
