@@ -120,6 +120,7 @@ person:
     cyalume_rgb:    'rgb050' # 緑 RGB 0, 255, 0
     image_rgb:      'rgb050' # 緑 RGB 0, 255, 0
 
+  # A-RISE
   KiraTsubasa: &KiraTsubasa
     fullname_ja:    '綺羅ツバサ'
     first_name_en:  'tsubasa'
@@ -137,6 +138,36 @@ person:
     first_name_en:  'anju'
     last_name_en:   'yuki'
     cv:             '大橋歩夕'
+
+  # モブ
+  Hideko: &Hideko
+    fullname_ja:    'ヒデコ'
+    first_name_en:  'hideko'
+    cv:             '三宅麻理恵'
+
+  Fumiko: &Fumiko
+    fullname_ja:    'フミコ'
+    first_name_en:  'fumiko'
+    cv:             '山本希望'
+
+  Mika: &Mika
+    fullname_ja:    'ミカ'
+    first_name_en:  'mika'
+    cv:             '原沙友里'
+
+  KosakaYukiho: &KosakaHonoka
+    fullname_ja:    '高坂雪穂'
+    first_name_en:  'yukiho'
+    last_name_en:   'kosaka'
+    cv:             '東山奈央'
+
+  AyaseArisa: &AyaseArisa
+    fullname_ja:    '綾瀬亜里沙'
+    first_name_en:  'arisa'
+    last_name_en:   'ayase'
+    cv:             '佐倉綾音'
+
+
 
 group:
   "μ's":
