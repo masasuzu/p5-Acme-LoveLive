@@ -1,4 +1,4 @@
-package Acme::LoveLive::Person;
+package Acme::LoveLive::Character;
 use strict;
 use warnings;
 use utf8;
@@ -51,17 +51,17 @@ sub add_phrases {
         (my $fullname = $class) =~ s/${package}:://;
         return $_instance->{$fullname} if exists $_instance->{$fullname};
 
-        my %args = map { my $attr = $_; "__$attr" => $data->{person}->{$fullname}->{$attr}; } @attributes;
+        my %args = map { my $attr = $_; "__$attr" => $data->{character}->{$fullname}->{$attr}; } @attributes;
         return $_instance->{$fullname} = bless \%args, $class;
     }
     *new = \&instance;
 
-    for my $fullname (keys %{ $data->{person} }) {
+    for my $fullname (keys %{ $data->{character} }) {
         no strict 'refs';
 
-        my $class = "Acme::LoveLive::Person::$fullname";
+        my $class = "Acme::LoveLive::Character::$fullname";
         @{"${class}::ISA"} = qw(
-            Acme::LoveLive::Person
+            Acme::LoveLive::Character
         );
         for my $attribute (@attributes) {
             *{"${class}::${attribute}"} = sub { shift->{"__$attribute"} };

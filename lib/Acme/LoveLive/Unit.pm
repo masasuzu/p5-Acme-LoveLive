@@ -1,33 +1,33 @@
-package Acme::LoveLive::Group;
+package Acme::LoveLive::Unit;
 use 5.10.0;
 use strict;
 use warnings;
 use utf8;
 
 use Acme::LoveLive::Data;
-use Acme::LoveLive::Person;
+use Acme::LoveLive::Character;
 
-sub group_name { die 'abstract method' }
-sub group_data { Acme::LoveLive::Data->group(shift->group_name) }
+sub unit_name { die 'abstract method' }
+sub unit_data { Acme::LoveLive::Data->unit(shift->unit_name) }
 
 sub member_fullnames {
     my ($class) = @_;
-    return (keys %{ $class->group_data->{member} });
+    return (keys %{ $class->unit_data->{member} });
 }
 
 sub members {
     my ($class) = @_;
 
-    return map { "Acme::LoveLive::Person::$_"->instance } $class->member_fullnames;
+    return map { "Acme::LoveLive::Character::$_"->instance } $class->member_fullnames;
 }
 
-package Acme::LoveLive::Group::μ::s;
-use parent qw(Acme::LoveLive::Group);
+package Acme::LoveLive::Unit::μ::s;
+use parent qw(Acme::LoveLive::Unit);
 
 *panayo = \&hanayo;
 *pana   = \&hanayo;
 
-sub group_name { "μ's" }
+sub unit_name { "μ's" }
 
 {
     my $class = __PACKAGE__;
@@ -37,10 +37,10 @@ sub group_name { "μ's" }
     }
 }
 
-package Acme::LoveLive::Group::A_RISE;
-use parent qw(Acme::LoveLive::Group);
+package Acme::LoveLive::Unit::A_RISE;
+use parent qw(Acme::LoveLive::Unit);
 
-sub group_name { "A-RISE" }
+sub unit_name { "A-RISE" }
 
 {
     my $class = __PACKAGE__;

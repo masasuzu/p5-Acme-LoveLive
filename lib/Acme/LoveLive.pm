@@ -4,26 +4,26 @@ use strict;
 use warnings;
 use utf8;
 use Encode;
-use Acme::LoveLive::Person;
-use Acme::LoveLive::Group;
+use Acme::LoveLive::Character;
+use Acme::LoveLive::Unit;
 
 our $VERSION = "0.01";
 
-sub person {
+sub character {
     my ($class, $fullname) = @_;
-    return "Acme::LoveLive::Person::$fullname"->instance;
+    return "Acme::LoveLive::Character::$fullname"->instance;
 }
 
-sub group {
+sub unit {
 
-    my ($class, $group_name) = @_;
+    my ($class, $unit_name) = @_;
     state $NORMALIZE_PROJECT = +{
         'A-RISE' => 'A_RISE',
     };
 
-    $group_name = $NORMALIZE_PROJECT->{$group_name} if exists $NORMALIZE_PROJECT->{$group_name};
+    $unit_name = $NORMALIZE_PROJECT->{$unit_name} if exists $NORMALIZE_PROJECT->{$unit_name};
 
-    return "Acme::LoveLive::Group::$group_name";
+    return "Acme::LoveLive::Unit::$unit_name";
 }
 
 1;
@@ -40,7 +40,7 @@ Acme::LoveLive - All about Japanese School Idol animation.
     use utf8;
     use Encode;
     use Acme::LoveLive;
-    for my $member (Acme::LoveLive::Group::μ's->members) {
+    for my $member (Acme::LoveLive::Unit::μ's->members) {
         say encode_utf8('image:  '. $member->colorize(sprintf('%s: %s', $member->fullname_ja, $member->call)));
         say encode_utf8('cylume: '. $member->colorize_by_cylume(sprintf('%s: %s', $member->fullname_ja, $member->call)));
     }
@@ -49,7 +49,7 @@ Acme::LoveLive - All about Japanese School Idol animation.
 =head1 DESCRIPTION
 
 ラブライブ! is famous Japanese animation.
-And μ's is School Idol group in ラブライブ!
+And μ's is School Idol unit in ラブライブ!
 
 This module, Acme::LoveLive, provides some usefull method  for μ's fan so called ラブライ部員.
 

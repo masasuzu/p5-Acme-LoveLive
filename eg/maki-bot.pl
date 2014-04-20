@@ -8,7 +8,7 @@ use String::IRC;
 use UnazuSan;
 
 use List::AllUtils qw( shuffle );
-my $maki = Acme::LoveLive->person('NishikinoMaki');
+my $maki = Acme::LoveLive->character('NishikinoMaki');
 
 my $unazu_san = UnazuSan->new(
     host             => 'localhost',

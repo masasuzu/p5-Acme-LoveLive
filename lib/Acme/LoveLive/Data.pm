@@ -18,9 +18,9 @@ sub instance {
 
 *new = \&instance;
 
-sub data   { shift->instance->{__data} }
-sub group  { shift->data->{'group'}->{$_[0]} }
-sub person { shift->data->{'person'}->{$_[0]} }
+sub data      { shift->instance->{__data} }
+sub unit      { shift->data->{'unit'}->{$_[0]} }
+sub character { shift->data->{'character'}->{$_[0]} }
 
 
 1;
@@ -29,7 +29,7 @@ __DATA__
 
 ---
 
-person:
+character:
   AyaseEli: &AyaseEli
     fullname_ja:    '絢瀬絵里'
     first_name_en:  'eli'
@@ -155,6 +155,7 @@ person:
     first_name_en:  'mika'
     cv:             '原沙友里'
 
+  # 妹's
   KosakaYukiho: &KosakaHonoka
     fullname_ja:    '高坂雪穂'
     first_name_en:  'yukiho'
@@ -169,7 +170,7 @@ person:
 
 
 
-group:
+unit:
   "μ's":
     member:
       AyaseEli:      *AyaseEli
