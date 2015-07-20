@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/masasuzu/p5-Acme-LoveLive.svg?branch=master)](https://travis-ci.org/masasuzu/p5-Acme-LoveLive)
 # NAME
 
 Acme::LoveLive - All about Japanese School Idol animation.
