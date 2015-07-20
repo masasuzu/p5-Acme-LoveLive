@@ -1,11 +1,13 @@
-requires 'perl', '5.10.0';
-
+requires 'Encode';
 requires 'Term::ANSIColor';
 requires 'YAML::Syck';
-on 'test' => sub {
-    requires 'Test::More', '0.98';
+requires 'parent';
+requires 'perl', '5.10';
+
+on configure => sub {
+    requires 'Module::Build';
 };
 
-on 'develop' => sub {
-    requires  'Minilla';
+on test => sub {
+    requires 'Test::More';
 };
