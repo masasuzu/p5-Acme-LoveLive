@@ -33,7 +33,6 @@
       },
       "develop" : {
          "requires" : {
-            "Minilla" : "0",
             "Test::CPAN::Meta" : "0",
             "Test::MinimumVersion::Fast" : "0.04",
             "Test::PAUSE::Permissions" : "0.04",
@@ -43,14 +42,16 @@
       },
       "runtime" : {
          "requires" : {
+            "Encode" : "0",
             "Term::ANSIColor" : "0",
             "YAML::Syck" : "0",
-            "perl" : "v5.10.0"
+            "parent" : "0",
+            "perl" : "5.10"
          }
       },
       "test" : {
          "requires" : {
-            "Test::More" : "0.98"
+            "Test::More" : "0"
          }
       }
    },
