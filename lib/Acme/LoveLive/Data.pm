@@ -168,6 +168,61 @@ character:
     last_name_en:   'ayase'
     cv:             '佐倉綾音'
 
+  # Aqours
+  ChikaTakami:        &ChikaTakami
+    fullname_ja:      '高海千歌'
+    first_name_en:    'chika'
+    lasta_name_en:    'takami'
+    cv:               '伊波杏樹'
+
+  RikoSakurauchi:     &RikoSakurauchi
+    fullname_ja:      '桜内梨子'
+    first_name_en:    'riko'
+    lasta_name_en:    'sakurauchi'
+    cv:               '逢田梨香子'
+
+  KananMatsuura:      &KananMatsuura
+    fullname_ja:      '松浦果南'
+    first_name_en:    'kanan'
+    lasta_name_en:    'matsuura'
+    cv:               '諏訪ななか'
+
+  DiaKurosawa:        &DiaKurosawa
+    fullname_ja:      '黒澤ダイヤ'
+    first_name_en:    'dia'
+    lasta_name_en:    'kurosawa'
+    cv:               '小宮有紗'
+
+  YouWatanabe:        &YouWatanabe
+    fullname_ja:      '渡辺曜'
+    first_name_en:    'you'
+    lasta_name_en:    'watanabe'
+    cv:               '斉藤朱夏'
+
+  YoshikoTsushima:    &YoshikoTsushima
+    fullname_ja:      '津島善子'
+    first_name_en:    'yoshiko'
+    lasta_name_en:    'tsushima'
+    cv:               '小林愛香'
+
+  HanamaruKunikida:   &HanamaruKunikida
+    fullname_ja:      '国木田花丸'
+    first_name_en:    'hanamaru'
+    lasta_name_en:    'kunikida'
+    cv:               '高槻かなこ'
+
+  MariOhara:          &MariOhara
+    fullname_ja:      '小原鞠莉'
+    first_name_en:    'mari'
+    lasta_name_en:    'ohara'
+    cv:               '鈴木愛奈'
+
+  RubyKurosawa:       &RubyKurosawa
+    fullname_ja:      '黒澤ルビィ'
+    first_name_en:    'ruby'
+    lasta_name_en:    'kurosawa'
+    cv:               '降幡愛'
+
 
 
 unit:
@@ -189,3 +244,14 @@ unit:
       TodoErena:      *TodoErena
       YukiAnju:       *YukiAnju
 
+  Aqours:
+    member:
+      ChikaTakami:        *ChikaTakami
+      RikoSakurauchi:     *RikoSakurauchi
+      KananMatsuura:      *KananMatsuura
+      DiaKurosawa:        *DiaKurosawa
+      YouWatanabe:        *YouWatanabe
+      YoshikoTsushima:    *YoshikoTsushima
+      HanamaruKunikida:   *HanamaruKunikida
+      MariOhara:          *MariOhara
+      RubyKurosawa:       *RubyKurosawa

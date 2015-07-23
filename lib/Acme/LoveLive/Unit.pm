@@ -50,5 +50,17 @@ sub unit_name { "A-RISE" }
     }
 }
 
+package Acme::LoveLive::Unit::Aqours;
+use parent qw(Acme::LoveLive::Unit);
+
+sub unit_name { "Aqours" }
+
+{
+    my $class = __PACKAGE__;
+    for my $person ($class->members) {
+        no strict 'refs';
+        *{"${class}::@{[$person->first_name_en]}"} = sub { $person };
+    }
+}
 1;
 
