@@ -20,7 +20,7 @@ Acme::LoveLive - All about Japanese School Idol animation.
 ラブライブ! is famous Japanese animation.
 And μ's is School Idol unit in ラブライブ!
 
-This module, Acme::LoveLive, provides some usefull method  for μ's fan so called ラブライ部員.
+This module, Acme::LoveLive, provides some useful method  for μ's fan so called ラブライ部員.
 
 # LICENSE
 
