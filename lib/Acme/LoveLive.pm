@@ -18,7 +18,8 @@ sub unit {
 
     my ($class, $unit_name) = @_;
     state $NORMALIZE_PROJECT = +{
-        'A-RISE' => 'A_RISE',
+        'A-RISE'     => 'A_RISE',
+        'lily white' => 'lily_white',
     };
 
     $unit_name = $NORMALIZE_PROJECT->{$unit_name} if exists $NORMALIZE_PROJECT->{$unit_name};

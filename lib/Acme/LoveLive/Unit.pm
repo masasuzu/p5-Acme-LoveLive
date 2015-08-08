@@ -62,5 +62,45 @@ sub unit_name { "Aqours" }
         *{"${class}::@{[$person->first_name_en]}"} = sub { $person };
     }
 }
+package Acme::LoveLive::Unit::BiBi;
+use parent qw(Acme::LoveLive::Unit);
+
+sub unit_name { "BiBi" }
+
+{
+    my $class = __PACKAGE__;
+    for my $person ($class->members) {
+        no strict 'refs';
+        *{"${class}::@{[$person->first_name_en]}"} = sub { $person };
+    }
+}
+
+package Acme::LoveLive::Unit::lily_white;
+use parent qw(Acme::LoveLive::Unit);
+
+sub unit_name { "lily white" }
+
+{
+    my $class = __PACKAGE__;
+    for my $person ($class->members) {
+        no strict 'refs';
+        *{"${class}::@{[$person->first_name_en]}"} = sub { $person };
+    }
+}
+
+package Acme::LoveLive::Unit::Printemps;
+use parent qw(Acme::LoveLive::Unit);
+
+sub unit_name { "Printemps" }
+
+{
+    my $class = __PACKAGE__;
+    for my $person ($class->members) {
+        no strict 'refs';
+        *{"${class}::@{[$person->first_name_en]}"} = sub { $person };
+    }
+}
+
+
 1;
 

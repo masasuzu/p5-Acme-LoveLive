@@ -238,6 +238,24 @@ unit:
       HoshizoraRin:  *HoshizoraRin
       NishikinoMaki: *NishikinoMaki
 
+  "Printemps":
+    member:
+      KosakaHonoka:  *KosakaHonoka
+      MinamiKotori:  *MinamiKotori
+      KoizumiHanayo: *KoizumiHanayo
+
+  "lily white":
+    member:
+      TojoNozomi:    *TojoNozomi
+      SonodaUmi:     *SonodaUmi
+      HoshizoraRin:  *HoshizoraRin
+
+  "BiBi":
+    member:
+      YazawaNico:    *YazawaNico
+      AyaseEli:      *AyaseEli
+      NishikinoMaki: *NishikinoMaki
+
   "A-RISE":
     member:
       KiraTsubasa:    *KiraTsubasa
