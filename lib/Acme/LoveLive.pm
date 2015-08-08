@@ -7,7 +7,7 @@ use Encode;
 use Acme::LoveLive::Character;
 use Acme::LoveLive::Unit;
 
-our $VERSION = "1.00";
+our $VERSION = "1.01";
 
 sub character {
     my ($class, $fullname) = @_;
