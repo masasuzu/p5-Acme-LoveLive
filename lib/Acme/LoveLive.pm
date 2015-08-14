@@ -48,7 +48,6 @@ Acme::LoveLive - All about Japanese School Idol animation.
         say 'cylume: '. $member->colorize_by_cylume(sprintf('%s: %s', $member->fullname_ja, $member->call));
     }
 
-
 =head1 DESCRIPTION
 
 ラブライブ! is famous Japanese animation.
